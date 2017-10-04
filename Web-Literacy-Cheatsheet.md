@@ -111,7 +111,19 @@ Let’s take a look at a paragraph selector styled in CSS with color, font-size,
    <p>I made a webpage.</p>
 ```
 
-Remeber to add CSS to your HTML page 
+Remeber to add CSS to your HTML page put its content over the `<style>` tage
+```html
+<head>
+    <style>
+      p {
+        color: red;
+        font-size: 20px;
+        text-align: center;
+      }
+  </style>
+<\head>
+```
+
 
 ### Common CSS Attributes
 

@@ -121,7 +121,7 @@ Remeber to add CSS to your HTML page put its content over the `<style>` tage
         text-align: center;
       }
   </style>
-<\head>
+</head>
 ```
 
 

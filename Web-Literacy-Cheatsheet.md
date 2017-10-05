@@ -1,67 +1,22 @@
-# Web Literacy Workshops 
-## Glossary & Cheatsheet 
-### Share common definitions & explanations to support learners**
+# Javascript JS + HTML/CSS
 
-### Glossary
+Berfore starting to use scripts on our HTML page let's try to respond the following questions?
 
-### HTML     
-
-**HTML**: Hypertext Markup Language, the language of the web, the skeleton of a webpage
-
-**Element**: part of a webpage, like a paragraph or image
-
-**Tag**: an HTML label that identifies an element on a webpage, like ```<p>``` identifies a paragraph
-
-**Opening Tag**: the tag that begins part of a webpage, like ```<p>``` before a paragraph
-
-**Closing Tag**: the tag that ends part of a webpage with a slash, like```</p>``` to end a paragraph
-
-**Attribute**: a characteristic of an element on a webpage, like background-color or color
-
-**Value**: the value for an attribute, like ```red``` for ```color``` or ```12px``` for ```font-size```
-
-### CSS
-
-**CSS**: Cascading Stylesheets, the styling language or web, the skin of a webpage
-
-**Stylesheet**: part of a webpage (inside ```<style>``` tags) or a separate document (ending with .css) with instructions for the attributes and values for different elements on a webpage
-
-**Selector**: the label used on a stylesheet to identify and style an element on a webpage
+1. What is HTML and what is CSS?
+2. What do you know about JS?
+3. How do you think CSS HTML and JS are connected?
 
 
-### JS
+## HTML and CSS
 
-**JS**: JavaScript, a coding language used on the web, the nervous system of a webpage
+This a basic HTML code
 
-**Function**: a script or program that makes something happen on a webpage
+```html
 
-**Variable**: a building block or gear that takes a value and helps make a function work
-
-**Local variable**: a variable that only works inside its function
-
-**Global variable**: a variable that works across functions
-
-**String**: a line of text inside quotation marks that a script displays exactly as it is
-
-**Array**: a collection of values, like a bucket or other container
-
-**Method**: a built-in JavaScript command, like ```alert();```
-
-**Conditional**: an ```if/then``` statement that uses logic to check for conditions on a webpage
-
-**Loop**: a counter that repeats steps in a program until certain conditions are met
-
-
-
-
-
-### How does HTML look?
-
-```HTML
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta charset=”utf-8”>
+    <meta charset="utf-8">
     <title>My Cool Webpage</title>
   </head>
   <body>
@@ -76,79 +31,264 @@
     </article>
   </body>
 </html>
+
 ```
 
 
-### Common HTML Tags in the Body
-| Tag                                         |Element/Style               |
-|:------------------------------------------- |:----------------------------|
-|`<p></p>`                                | Paragraph                  |
-|`<br/>`                                 | Line break                 |
-|`<strong></strong>`                      |   Bold                     |
-|`<em></em>`                              | Italic                     |
-|`<u></u>`                                | Underlined                 |
-|`<img src=”[web address of a picture]”/>`| An image                   | 
-|`<a href=”[web address]”></a>`           |  A link                    |
-|`<h1></h1> to <h6></h6>`                 | Headings from big to small |
-|`<div></div>`                            | Creates a division |
+This a basic HTML and CSS code
 
-### How does CSS look?
 
-Let’s take a look at a paragraph selector styled in CSS with color, font-size, and text-alignment.
-
-**CSS**
-
-```css
-  p {
-    color: red;
-    font-size: 20px;
-    text-align: center;
-  }
-```
-
-**HTML**
 ```html
-   <p>I made a webpage.</p>
-```
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Cool Webpage</title>
 
-Remeber to add CSS to your HTML page put its content over the `<style>` tage
-```html
-<head>
     <style>
-      p {
-        color: red;
-        font-size: 20px;
-        text-align: center;
+        body {
+            font-family: Tahoma, Geneva, sans-serif;
+        }
+        h1 {
+          color: #550A21;
+          font-size: 50px;
+        }
+        h2 {
+          color: #21550A;
+          font-size: 30px;
+        }
+        #welcomeMsg {
+          color: red;
+          font-size: 15px;
+        }
+        .box{
+          border: 3px solid #666;
+          padding-left: 10px;
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-top: 10px;
+        }
+    </style>
+
+  </head>
+  <body>
+    <div class="box">
+      <header>
+        <h1>The Daily Whatever</h1>
+         <div id="welcomeMsg">WELCOME YOU</div>
+      </header>
+
+      <article>
+        <h2> Martians invade earth</h2>
+        <p>blah blah blah blah blah
+        blah blah blah blah blah.
+        </p>
+      </article>
+
+    </div>
+  </body>
+</html>
+```
+
+1. How the the elementes inside `<style>` are influencing the HTML content?
+
+
+## HTML, CSS and JS
+
+Now we want to mix all the three elements, first pay attention to our vocabulary, we will be speaking those names all the time
+
+### JS
+
+__Function__: a script or program that makes something happen on a webpage
+
+__Method__: a built-in JavaScript command, like `alert();`
+
+__Variable__: this is where you store information on the computer memory, also a building block or gear that takes a value and helps make a function work
+
+__String__: a line of text inside quotation marks that a script displays exactly as it is
+
+__Array__: a collection of values, like a bucket or other container
+
+
+Look at our basic template now with HTML, CSS and js
+
+```html
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Cool Webpage</title>
+
+    <style>
+        body {
+            font-family: Tahoma, Geneva, sans-serif;
+        }
+        h1 {
+          color: #550A21;
+          font-size: 50px;
+        }
+        h2 {
+          color: #21550A;
+          font-size: 30px;
+        }
+        #welcomeMsg {
+          color: red;
+          font-size: 15px;
+        }
+        .box{
+          border: 3px solid #666;
+          padding-left: 10px;
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-top: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <header>
+        <h1>The Daily Whatever</h1>
+         <div id="welcomeMsg">WELCOME YOU</div>
+      </header>
+
+      <article>
+        <h2> Martians invade earth</h2>
+        <p>blah blah blah blah blah
+        blah blah blah blah blah.
+        </p>
+      </article>
+
+    </div>
+
+    <script>
+      //here is where we put our JS scripts
+      //ps: this is a comment and the browser ignores it
+
+      //the document.onload is an event that trigger
+      //the function myFunction() when the documents is loaded 
+      document.onload = myFunction();
+
+      function myFunction(){
+          alert("Hello You");
       }
-  </style>
-</head>
+
+    </script>
+  </body>
+</html>
+
 ```
 
 
-### Common CSS Attributes
-
-|Attribute                      |Possible values                                  |Notes            |
-|:------------------------------------------------|:------------------------------------|---------------|
-|`color: value;`                               |Websafe color names, hexidecimal codes, rgb codes | This works on fonts. |
-|`background-color: value;`                    |Websafe color names, hexidecimal codes, rgb codes |This works on large elements<br>like paragraphs or even the whole body.|
-|`background-image: url("[image address]");` | `url(“[image address]”)` | This works well on large elements<br>or even the whole body.|
-|`font-size: value;`                           |Depends on the scale, but think of `12px` like `12pt font in a word document. |You can use pixels `(px)`, ems `(em)`, and `%` for measurement. |
-|`display: value;`                             |inline or block | inline means in a row; block means on its own line.
-|`position: value;`                            |  absolute, fixed, relative | absolute pins an element to a spot on the page; fixed pins the page and its elements (no scrolling);<br>relative measures the distance between elements.
-|`top: value;`<br>`bottom: value;`<br>`left: value;`<br>`right: value;`|Any numerical value |These go with position; each measures from that edge of the page.
-|`text-shadow: x-offset y-offset color;`                               | Numerical values for the offsets and a color for the shadow |You can stack these to make wild patterns and shadows.
-
-
-#### How does JS look?
+So if you have already your HTML page just add the `<script><\script>` sandwich before the end of the `<\body>` tag 
 
 ```js
-function helloWorld() {             \\ Name the function so your webpage can find it.
-  var myMessage = "Hi, everybody!"; \\ Define a variable with a message inside a string,
-                                    \\ a line of text inside quotations the function will display exactly as it is.
-  alert (myMessage);                \\Open an alert, or pop-up box, that displays a string or whatever string is attached to my variable.
-}                                   \\End the function.
+
+    <script>
+      //here is where we put our JS scripts
+      //ps: this is a comment and the browser ignores it
+
+      //the document.onload is an event that trigger
+      //the function myFunction() when the documents is loaded 
+      document.onload = myFunction();
+
+      function myFunction(){
+          alert("Hello You");
+      }
+
+    </script>
+
 ```
 
 
-### References
-* [Mozilla - Make your first web page](https://mozilla.github.io/curriculum-final/make-your-first-webpage/session08-make-your-first-webpage.html#overview)
+1. What happens when you load the page?
+2. Try to change what is inside the function `alert("Another message");`, did the message has changed?
+
+
+Lets use another method and try to change the content on your page, make sure you have an HTML ID attribute with `id="welcomeMsg"` this very important because the browser needs to now where exactly you want to make the changes, this is like the CSS selector
+
+In this piece of code we are replacing the function `alert()` to another method that searchs your HTML content for a specific ID.
+
+```js
+
+    <script>
+
+      //the document.onload is an event that trigger
+      //the function myFunction() when the documents is loaded 
+      document.onload = myFunction();
+
+      //myFunction now searchs for the id 
+      function myFunction(){
+        document.getElementById("welcomeMsg").innerHTML = "New message!!!!!!";
+      }
+
+    </script>
+
+```
+
+
+1. What happens when you load the page?
+2. Can you point out what's the new JS script is doing to the page?
+
+What if we use some dinamic variable
+
+```js
+
+    <script>
+
+      //the document.onload is an event that trigger
+      //the function myFunction() when the documents is loaded 
+      document.onload = myFunction();
+
+      //myFunction now searchs for the id 
+      function myFunction(){
+        document.getElementById("welcomeMsg").innerHTML = new Date();
+      }
+
+    </script>
+
+```
+
+1. What happens when you load the page?
+
+
+#### Random Welcome message
+
+1. What do we need to make Random welcome message for the page?
+
+2. We might need a list of messages, an array
+
+```js
+
+    <script>
+
+  		var listMessages = ["Ola como vai", "Hi How Are you", "Good Morning", "Welcome"]
+
+    </script>
+
+```
+
+How do we access the elements in the array?
+
+
+```js
+
+    <script>
+
+      //the document.onload is an event that trigger
+      //the function myFunction() when the documents is loaded 
+      document.onload = myFunction();
+
+
+      //myFunction now searchs for the id 
+      function myFunction(){
+      		//this is your array with strings your messages,
+
+			var listMessages = ["Ola como vai", "Hi How Are you", "Good Morning", "Welcome"]
+			document.getElementById("welcomeMsg").innerHTML = listMessages[0];
+      }
+    </script>
+
+```
+
+Try to change the number inside the variable name `listMessages[NUMBER]` save and refresh, note the difference
+

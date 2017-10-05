@@ -224,3 +224,68 @@ In this piece of code we are replacing the function `alert()` to another method 
     </script>
 
 ```
+
+
+1. What happens when you load the page?
+2. Can you point out what's the new JS script is doing to the page?
+
+What if we use some dinamic variable
+
+```js
+
+    <script>
+
+      //the document.onload is an event that trigger
+      //the function myFunction() when the documents is loaded 
+      document.onload = myFunction();
+
+      //myFunction now searchs for the id 
+      function myFunction(){
+        document.getElementById("welcomeMsg").innerHTML = new Date();
+      }
+
+    </script>
+
+```
+
+1. What happens when you load the page?
+
+
+#### Random Welcome message
+
+1. What do we need to make Random welcome message for the page?
+
+2. We might need a list of messages, an array
+
+```js
+
+    <script>
+
+  		var listMessages = ["Ola como vai", "Hi How Are you", "Good Morning", "Welcome"]
+
+    </script>
+
+```
+
+How do we access the elements in the array?
+
+
+```js
+
+    <script>
+
+      //the document.onload is an event that trigger
+      //the function myFunction() when the documents is loaded 
+      document.onload = myFunction();
+
+
+      //myFunction now searchs for the id 
+      function myFunction(){
+      		//this is your array with strings your messages,
+
+			var listMessages = ["Ola como vai", "Hi How Are you", "Good Morning", "Welcome"]
+			document.getElementById("welcomeMsg").innerHTML = listMessages[0];
+      }
+    </script>
+
+```

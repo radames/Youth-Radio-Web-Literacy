@@ -148,6 +148,14 @@ Look at our basic template now with HTML, CSS and js
       //here is where we put our JS scripts
       //ps: this is a comment and the browser ignores it
 
+      //the document.onload is an event that trigger
+      //the function myFunction() when the documents is loaded 
+      document.onload = myFunction();
+
+      function myFunction(){
+          alert("Hello You");
+      }
+
     </script>
 
   </head>
@@ -170,3 +178,29 @@ Look at our basic template now with HTML, CSS and js
 </html>
 
 ```
+
+
+So if you have already your HTML page just append this to the `<head></head>` tag
+
+```js
+
+    <script>
+      //here is where we put our JS scripts
+      //ps: this is a comment and the browser ignores it
+
+      //the document.onload is an event that trigger
+      //the function myFunction() when the documents is loaded 
+      document.onload = myFunction();
+
+      function myFunction(){
+          alert("Hello You");
+      }
+
+    </script>
+
+```
+
+
+1. What happen when you load the page?
+2. Try to change what is inside the function `alert("Another message");`
+

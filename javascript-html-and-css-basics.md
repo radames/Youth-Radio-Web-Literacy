@@ -143,21 +143,6 @@ Look at our basic template now with HTML, CSS and js
           margin-top: 10px;
         }
     </style>
-
-    <script>
-      //here is where we put our JS scripts
-      //ps: this is a comment and the browser ignores it
-
-      //the document.onload is an event that trigger
-      //the function myFunction() when the documents is loaded 
-      document.onload = myFunction();
-
-      function myFunction(){
-          alert("Hello You");
-      }
-
-    </script>
-
   </head>
   <body>
     <div class="box">
@@ -174,13 +159,27 @@ Look at our basic template now with HTML, CSS and js
       </article>
 
     </div>
+
+    <script>
+      //here is where we put our JS scripts
+      //ps: this is a comment and the browser ignores it
+
+      //the document.onload is an event that trigger
+      //the function myFunction() when the documents is loaded 
+      document.onload = myFunction();
+
+      function myFunction(){
+          alert("Hello You");
+      }
+
+    </script>
   </body>
 </html>
 
 ```
 
 
-So if you have already your HTML page just append this to the `<head></head>` tag
+So if you have already your HTML page just add the `<script><\script>` sandwich before the end of the `<\body>` tag 
 
 ```js
 
@@ -201,6 +200,27 @@ So if you have already your HTML page just append this to the `<head></head>` ta
 ```
 
 
-1. What happen when you load the page?
-2. Try to change what is inside the function `alert("Another message");`
+1. What happens when you load the page?
+2. Try to change what is inside the function `alert("Another message");`, did the message has changed?
 
+
+Lets use another method and try to change the content on your page, make sure you have an HTML ID attribute with `id="welcomeMsg"` this very important because the browser needs to now where exactly you want to make the changes, this is like the CSS selector
+
+In this piece of code we are replacing the function `alert()` to another method that searchs your HTML content for a specific ID.
+
+```js
+
+    <script>
+
+      //the document.onload is an event that trigger
+      //the function myFunction() when the documents is loaded 
+      document.onload = myFunction();
+
+      //myFunction now searchs for the id 
+      function myFunction(){
+        document.getElementById("welcomeMsg").innerHTML = "New message!!!!!!";
+      }
+
+    </script>
+
+```

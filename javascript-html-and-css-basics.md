@@ -289,3 +289,5 @@ How do we access the elements in the array?
     </script>
 
 ```
+
+Try to change the number inside the variable name `listMessages[NUMBER]` save and refresh, note the difference

@@ -291,3 +291,43 @@ How do we access the elements in the array?
 ```
 
 Try to change the number inside the variable name `listMessages[NUMBER]` save and refresh, note the difference
+
+
+Now that you see how to access items from the list, you need an index number from 0 to the lenght of your list, lets generate a random number
+
+
+```html
+
+      document.onload = myFunction();
+
+      //myFunction now searchs for the id 
+      function myFunction(){
+        var messageList = ["Hi welcome", "Ola bem vindo", "hello bro", "good morning", "bom dia"];
+
+        document.getElementById("welcomeMsg").innerHTML = Math.floor(Math.random() * messageList.length);
+      }
+```
+
+Every time you load/refresh your page the innerHTML from the id tag __welcomeMsg__ is replaced with a random number between 0 and the messageList.length.
+
+Finally we can use a random number as the index to select an item in the list
+
+```html
+    <script>
+ 
+      //the document.onload is an event that trigger
+      //the function myFunction() when the documents is loaded 
+      document.onload = myFunction();
+
+      //myFunction now searchs for the id 
+      function myFunction(){
+        var messageList = ["Hi welcome", "Ola bem vindo", "hello bro", "good morning", "bom dia"];
+        var randomNumber = Math.floor(Math.random() * messageList.length);
+
+        document.getElementById("welcomeMsg").innerHTML = messageList[randomNumber];
+      }
+
+    </script>
+```
+
+Pay attention to the variable `messageList[randomNumber]` the `randomNumber` is being used as the index for the messageList array.

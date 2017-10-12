@@ -249,3 +249,88 @@ var data1 = {
 };
   
 ```
+
+# The Pie Chart
+
+Let's start creating a space `<div></div>` to put our Pie Chart
+
+Choose a place on your page and add the `<div></div>` tag with the ID for the Pie Chart
+Look at the `class` attribute and `id` and think about it.
+
+```html
+   <div class="graph" id="myGraphPie"></div>
+```
+
+Now create another file named `scriptPie.js` and copy this into that.
+
+```js
+
+(function(){
+var d3 = Plotly.d3;
+
+var element = d3.select('#myGraphPie');
+var graphnode = element.node();
+
+
+var graphTitle = "My First Pie graph";
+
+var data = [{
+  values: [19, 26, 55],
+  labels: ['Residential', 'Non-Residential', 'Utility'],
+  type: 'pie'
+}];
+
+
+Plotly.plot(graphnode, data,
+    {
+    title: graphTitle,
+    font: {
+        size: 16
+    }
+},
+{
+  displayModeBar: false
+});
+
+//this part make sure every window resize it also resizes the graph
+window.addEventListener('resize', function(event){
+    Plotly.Plots.resize(graphnode);
+});
+})();
+
+```
+
+And load it on your hmtl page adding the `<script></script>` before the end of the tag `</body>`
+
+
+```html
+  <script src="scriptPie.js"></script>
+```
+
+
+Your portfolio folder will be:
+
+```
+portfolio
+│   index.html
+|   styles.css
+│   welcome.js   
+|   scriptBar.js
+|   scriptLine.js
+|   scriptPie.js
+```
+
+### Data
+
+The data for the Pie chart consists of values and labels
+
+```js
+
+var data = [{
+  values: [19, 26, 55],
+  labels: ['Residential', 'Non-Residential', 'Utility'],
+  type: 'pie'
+}];
+  
+```
+

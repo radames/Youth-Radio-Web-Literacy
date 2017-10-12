@@ -140,3 +140,112 @@ Changing the date is simple,  just play around the numbers and the lables, make 
   y: [100, 30, 20],
   
 ```
+
+
+# The Line Chart
+
+Let's start creating a space `<div></div>` to put our Line Chart
+
+Choose a place on your page and add the `<div></div>` tag with the ID for the Line Chart
+Look at the `class` attribute and `id` and think about it.
+
+```html
+   <div class="graph" id="myGraphLine"></div>
+```
+
+Now create another file named `scriptLine.js` and copy this into that.
+
+```js
+
+(function(){
+
+var d3 = Plotly.d3;
+
+var element = d3.select('#myGraphLine');
+var graphnode = element.node();
+
+
+var graphTitle = "My First Line graph";
+
+var data1 = {
+  name: 'Red Title',
+  x: [1, 2, 3, 4],
+  y: [10, 15, 13, 17],
+  type: 'scatter',
+  line: {
+    color: 'red',
+    width: 3
+  }
+};
+
+var data2 = {
+  name: 'Blue',
+  x: [1, 2, 3, 4],
+  y: [16, 5, 11, 9],
+  type: 'scatter',
+  line: {
+    color: 'blue',
+    width: 3
+  }
+};
+
+var data = [data1, data2];
+
+
+Plotly.plot(graphnode, data, {
+    title: graphTitle,
+    font: {
+        size: 16
+    }
+},
+{
+  displayModeBar: false
+});
+
+
+//this part make sure every window resize it also resizes the graph
+window.addEventListener('resize', function(event){
+    Plotly.Plots.resize(graphnode);
+});
+
+})();
+
+```
+
+And load it on your hmtl page adding the `<script></script>` before the end of the tag `</body>`
+
+
+```html
+  <script src="scriptLine.js"></script>
+```
+
+
+Your portfolio folder will be:
+
+```
+portfolio
+│   index.html
+|   styles.css
+│   welcome.js   
+|   scriptBar.js
+|   scriptLine.js
+```
+
+### Data
+
+The data for the Line chart consists of points __X__ and __Y__, also label name.
+
+```js
+
+var data1 = {
+  name: 'Red Title',
+  x: [1, 2, 3, 4],
+  y: [10, 15, 13, 17],
+  type: 'scatter',
+  line: {
+    color: 'red',
+    width: 3
+  }
+};
+  
+```

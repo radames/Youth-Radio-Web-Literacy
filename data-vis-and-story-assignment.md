@@ -49,3 +49,10 @@ Graph 3
 # Publish
 
 Don't forget to create a new repository on [gitbub new](https://github.com/new) and upload all your new files.
+
+
+# HTML/CSS/JS References
+
+* [Charts and JS](https://github.com/youthradio/Youth-Radio-Web-Literacy/blob/master/Infographics-with-JS.md)
+* [HTML/CSS Cheatsheet](https://github.com/youthradio/Youth-Radio-Web-Literacy/blob/master/Web-Literacy-Cheatsheet.md)
+* [HTML/CSS/JS](https://github.com/youthradio/Youth-Radio-Web-Literacy/blob/master/javascript-html-and-css-basics.md)

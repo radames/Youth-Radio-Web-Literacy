@@ -5,7 +5,7 @@ var element = d3.select('#myGraphPie');
 var graphnode = element.node();
 
 
-var graphTitle = "My First BAR graph";
+var graphTitle = "My First Pie Chart";
 
 var data = [{
   values: [19, 26, 55],

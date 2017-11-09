@@ -12,7 +12,7 @@ var scaleValue = 1;
 var canvasMax = 500;
 
 function setup() {
-  var cWidth = document.getElementById('canvasContainer').offsetWidth;
+  var cWidth = document.getElementById('canvasContainer').clientWidth;
 
   var myCanvas = createCanvas(min(canvasMax,cWidth), min(canvasMax,cWidth));
   myCanvas.parent('canvasContainer');
@@ -31,8 +31,8 @@ function draw() {
 
 function windowResized() {
   //cavas size will be resized in case window size has changed
-  var cWidth = document.getElementById('canvasContainer').offsetWidth;
-  var cHeight = document.getElementById('canvasContainer').offsetHeight;
+  var cWidth = document.getElementById('canvasContainer').clientWidth;
+  var cHeight = document.getElementById('canvasContainer').clientHeight;
   scaleValue = min(canvasMax,cWidth)/canvasMax;
   resizeCanvas(min(canvasMax,cWidth), min(canvasMax,cWidth));
 }

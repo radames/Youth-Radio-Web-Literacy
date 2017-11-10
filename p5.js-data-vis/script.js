@@ -13,14 +13,20 @@ var canvasMax = 500;
 
 var year = "2017";
 
+function setYear(newyear){
+    year = newyear;
+}
+
 function setup() {
   var cWidth = document.getElementById('canvasContainer').clientWidth;
 
   var myCanvas = createCanvas(min(canvasMax, cWidth), min(canvasMax, cWidth));
   myCanvas.parent('canvasContainer');
+
   var bt2017 = document.getElementById('bt2017');
   var bt2018 = document.getElementById('bt2018');
   var bt2019 = document.getElementById('bt2019');
+
   bt2017.addEventListener("click", function() {
     setYear("2017");
   });
@@ -37,27 +43,27 @@ function setup() {
 function draw() {
 
   //fill(red, gree, blue)
-  var daca_2017 = 201678;
-  var daca_2018 = 275344;
-  var daca_2019 = 321920;
-  var scaleNumber = 1 / 4000;
+  var value_2017 = 201678;
+  var value_2018 = 275344;
+  var value_2019 = 321920;
+  var myScale = 1 / 4000;
   var barW = 100;
 
   var data, label , color;
-
-  if (year === "2017") {
-    data = daca_2017 * scaleNumber;
+  if (year == "2017") {
+    data = value_2017 * myScale;
     label = "DACA 2017";
     color = "#D831E8";
-  } else if (year === "2018") {
-    data = daca_2018 * scaleNumber;
+  } else if (year == "2018") {
+    data = value_2018 * myScale;
     label = "DACA 2018";
     color = "#5242FF";
-  } else if (year === "2019") {
-    data = daca_2019 * scaleNumber;
+  } else if (year == "2019") {
+    data = value_2019 * myScale;
     label = "DACA 2019";
     color = "#58C1E8";
   }
+
   push();
   noStroke();
   scale(scaleValue);

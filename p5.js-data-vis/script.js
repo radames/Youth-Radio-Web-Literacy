@@ -11,64 +11,86 @@ for (var count = 0; count < 100; count++) {
 var scaleValue = 1;
 var canvasMax = 500;
 
+var year = "2017";
+
 function setup() {
   var cWidth = document.getElementById('canvasContainer').clientWidth;
 
-  var myCanvas = createCanvas(min(canvasMax,cWidth), min(canvasMax,cWidth));
+  var myCanvas = createCanvas(min(canvasMax, cWidth), min(canvasMax, cWidth));
   myCanvas.parent('canvasContainer');
+  var bt2017 = document.getElementById('bt2017');
+  var bt2018 = document.getElementById('bt2018');
+  var bt2019 = document.getElementById('bt2019');
+  bt2017.addEventListener("click", function() {
+    setYear("2017");
+  });
+  bt2018.addEventListener("click", function() {
+    setYear("2018");
+  });
+  bt2019.addEventListener("click", function() {
+    setYear("2019");
+  });
+  bt2017.click();
+
 }
 
 function draw() {
-  push();
-  noStroke();
-  scale(scaleValue);
-  background('#D6F5D6');
+
   //fill(red, gree, blue)
   var daca_2017 = 201678;
   var daca_2018 = 275344;
   var daca_2019 = 321920;
-  var scaleNumber = 1/4000;
-  
+  var scaleNumber = 1 / 4000;
+  var barW = 100;
+
+  var data, label , color;
+
+  if (year === "2017") {
+    data = daca_2017 * scaleNumber;
+    label = "DACA 2017";
+    color = "#D831E8";
+  } else if (year === "2018") {
+    data = daca_2018 * scaleNumber;
+    label = "DACA 2018";
+    color = "#5242FF";
+  } else if (year === "2019") {
+    data = daca_2019 * scaleNumber;
+    label = "DACA 2019";
+    color = "#58C1E8";
+  }
+  push();
+  noStroke();
+  scale(scaleValue);
+
+  push();
+  translate(canvasMax / 2, 0);
+  background('#D6F5D6');
+
   textAlign(CENTER);
-  fill('#AACC11');
-  ellipse(50,100, daca_2017*scaleNumber ,daca_2017*scaleNumber);
+  fill(color);
+  ellipse(0, 100, data, data);
   fill('#000000');
-  text("DACA 2017", 50,150)
-  
-  fill('#AACC11');
-  ellipse(150,100, daca_2018*scaleNumber ,daca_2018*scaleNumber);
-  fill('#000000');
-  text("DACA 2018", 150,150)
-  
-  fill('#AACC11');
-  ellipse(250,100, daca_2019*scaleNumber ,daca_2019*scaleNumber);
-  fill('#000000');
-  text("DACA 2019", 250,150)
-  
-  
-  var barW = 80;
-  fill('#AACC11');
-  rect(50-barW/2, 300, barW, -daca_2017*scaleNumber );
-  fill('#000000');
-  text("DACA 2017", 50, 330)
+  text(label, 0, 200)
 
-  fill('#AACC11');
-  rect(150-barW/2, 300, barW, -daca_2018*scaleNumber );
-  fill('#000000');
-  text("DACA 2018", 150, 330)
 
-  fill('#AACC11');
-  rect(250-barW/2, 300, barW,  -daca_2019*scaleNumber );
+  fill(color);
+  rect(-barW / 2, 400, barW, -data);
   fill('#000000');
-  text("DACA 2019", 250, 330)
-  
+  text(label, 0, 450)
+
+
   pop();
 }
+
+function setYear(_year) {
+  year = _year;
+}
+
 
 function windowResized() {
   //cavas size will be resized in case window size has changed
   var cWidth = document.getElementById('canvasContainer').clientWidth;
   var cHeight = document.getElementById('canvasContainer').clientHeight;
-  scaleValue = min(canvasMax,cWidth)/canvasMax;
-  resizeCanvas(min(canvasMax,cWidth), min(canvasMax,cWidth));
+  scaleValue = min(canvasMax, cWidth) / canvasMax;
+  resizeCanvas(min(canvasMax, cWidth), min(canvasMax, cWidth));
 }

@@ -8,10 +8,19 @@ Create an HTML page with the following contents, you can use images and text fro
 * Image tags `<img>`
 * External Links `<a href>`
 
-Other requirments 
+Other requirements  
 
-* Must be mobile responsive
-* (optional) have some Javascript code
+* Must be mobile responsive (bootstrap) 
+* External CSS Styles file `.css`
+* (optional) External Javascript file `.js`
+
+## Design Suggestion  
+
+<img src="images/template.png" alt="How does CSS actually work? by Mozilla"/>
+
+## Project Structure 
+
+Don't forget to organize your files 
 
 ```
 ProjectFolder

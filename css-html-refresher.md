@@ -30,6 +30,9 @@ ProjectFolder
 |   styles.css   
 |   script.js (optional)
 ```
+## Publish on Github
+
+When finished, create a new repository on your github account and upload the project
 
 
 ### References 

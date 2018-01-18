@@ -16,6 +16,8 @@ Other requirements
 
 ## Design Suggestion  
 
+You can follow this design and choose your own set of styles, colors, effects.
+
 <img src="images/template.png" alt="How does CSS actually work? by Mozilla"/>
 
 ## Project Structure 

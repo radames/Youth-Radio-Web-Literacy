@@ -20,6 +20,7 @@ Have a look on the [examples](#references)
 ### References
 
 * [About Choose Your Own Adveture Books- Wikipedia](https://en.wikipedia.org/wiki/Choose_Your_Own_Adventure)
+* [Paper Cups Story](https://www.youtube.com/watch?v=pQEh9lwL3o4)
 * [Youtube interactive](https://www.youtube.com/watch?v=9XgQEEBnTsY) 
 * [Twinery Javascript Text Adventure Framework](https://twinery.org/)
  * [Doors Story](https://inurashii.itch.io/doors)

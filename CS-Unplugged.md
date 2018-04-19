@@ -59,6 +59,96 @@ function checkScores(randomNumer, personalScore, friendScore){
 
 
 
+```
+function checkScores(randomNumer, personalScore, friendScore){
+ if(personalScore > randomNumer || friendScore > randomNumer){
+    STANDUP
+    if(friendScore > randomNumer){
+     RISE YOUR HAND
+    }
+    if(personalScore > randomNumer){
+     RISE YOUR HAND
+    }
+ }else{
+    SITDOWN
+ }
+}
+```
+
+```
+function checkScores(randomNumer, personalScore, friendScore){
+ if(!(personalScore > randomNumer) || !(friendScore > randomNumer)){
+    STANDUP
+    if(friendScore > randomNumer){
+     RISE YOUR HAND
+    }
+    if(personalScore > randomNumer){
+     RISE YOUR HAND
+    }
+ }else{
+    SITDOWN
+ }
+}
+```
+
+```
+function checkScores(randomNumer, personalScore){
+ if(!(personalScore > randomNumer)){
+    STANDUP
+ }else{
+    SITDOWN
+ }
+}
+```
+
+```
+//Kaylahni
+if (personalScore < 10 && personalScore > 2 ){
+  personalScore = personalScore + 3;
+}else{
+  personalScore = personalScore - 1;
+}
+
+//Devin
+if (personalScore === friendScore){
+  personalScore = personalScore * friendScore;
+}else{
+  personalScore = personalScore - friendScore;
+}
+
+//Liam
+if (personalScore === 3){
+  personalScore = personalScore + 100;
+}else{
+  personalScore = personalScore - 100;
+}
+
+//Christian
+if(personalScore < 0){
+  personalScore = personalScore * -1;
+}else if(personalScore > 0){
+  personalScore = personalScore * -2;
+}else{
+  personalScore = personalScore + 1;
+}
+
+//Elsa
+if(personalScore % 2 === 0){
+  personalScore = personalScore + 20;
+}else{
+  personalScore = personalScore - 20;
+}
+
+//Shanya
+if(personalScore >= 0.4*groupScore){
+  personalScore = personalScore - 7;
+}else{
+  personalScore = personalScore - 10;
+}
+
+```
+
+
 References:
 
 1. https://teachinglondoncomputing.org

@@ -5,11 +5,12 @@ function processNumber(){
 
   var output1 = document.querySelector("#output-1") //variable storing the element to be modified
   var imgContent = "<img class='img-fluid' src='https://media.giphy.com/media/5VMNcCxVBibZK/giphy.gif'></img>";
+  var msgContent = "<h1>Nothing Here</h1>";
 
   if(randomNumber > 7){ //
     output1.innerHTML = imgContent;
   } else {
-    output1.innerHTML = "<h1>Nothing Here</h1>";
+    output1.innerHTML = msgContent;
   }
 
   //write your own if/else for container output-2 output-3 output-4

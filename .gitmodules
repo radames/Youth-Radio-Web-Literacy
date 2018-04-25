@@ -1,3 +1,6 @@
 [submodule "CS-plugged"]
 	path = CS-plugged
 	url = git@github.com:youthradio/CS-plugged.git
+[submodule "Interactive-Fiction-JS-template"]
+	path = Interactive-Fiction-JS-template
+	url = git@github.com:youthradio/Interactive-Fiction-JS-template.git

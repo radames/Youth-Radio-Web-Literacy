@@ -148,8 +148,54 @@ if(personalScore >= 0.4*groupScore){
 
 ```
 
+```
+function checkCard(card){
+  if(card.color === RED){
+     personalScore = personalScore + card.value;
+  } else {
+     personalScore = personalScore - card.value;
+  }
+}
+```
+
+
+# List Activity
+
+1. Assign each person a score variable and initilize with 0: `var list = []`
+1. Shuffle the cards `suffleCards()`
+1. Cycle over each person 
+1. Pick one card and push to your list it must be in oder you picked the cards.
+1. Now that you have a list array with many items, try to get elements ther.
+1. Get the element with index 10, 6, 4, 2
+
+
+1. Make a `var myList = [] ` (Empty bag)
+1. Push 4 cards
+1. `myList.push(card1)`
+1. `myList.push(card2)`
+1. `myList.push(card3)`
+1. `myList.push(card4)`
+
+```js
+
+
+
+
+```
+
+
+
+
+
+
+
+
+1. Do it three times
+
 
 References:
 
 1. https://teachinglondoncomputing.org
 1. https://code.org/curriculum/unplugged
+
+

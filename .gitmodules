@@ -1,0 +1,3 @@
+[submodule "CS-plugged"]
+	path = CS-plugged
+	url = git@github.com:youthradio/CS-plugged.git
